@@ -1,0 +1,22 @@
+{
+  "name": "flashcard-generator",
+  "version": "1.0.0",
+  "description": "a flashcard generator from the command line",
+  "main": "basic.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cchane4/Flashcard-Generator.git"
+  },
+  "author": "Chad Chaney",
+  "license": "MIT ",
+  "bugs": {
+    "url": "https://github.com/cchane4/Flashcard-Generator/issues"
+  },
+  "homepage": "https://github.com/cchane4/Flashcard-Generator#readme",
+  "dependencies": {
+    "inquirer": "^4.0.1"
+  }
+}
