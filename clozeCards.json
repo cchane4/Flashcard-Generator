@@ -14,5 +14,9 @@
 	{
 		"partial": "something for ...",
 		"answer": "nothing"
+	},
+	{
+		"partial": "... has 23 grand slams to her name.",
+		"answer": "Serena Williams"
 	}
 ]

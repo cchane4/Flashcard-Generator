@@ -1,14 +1,14 @@
-// require inquirer npm package 
+// imports inquirer npm package 
 var inquirer = require("inquirer");
-//preinstalled in node is fs for writing data 
+//imports preinstalled in node is fs for writing data 
 var fs = require('fs');
-
+// importsthe json file that holds basic cards 
 var cardData = require('./basicCards.json');
 
 
 
 
-// takes in a pair of strings from the front-side and the back-side 
+// constructor function takes in a pair of strings from the front-side and the back-side 
 // this refers to the object that "owns" the constructor 
 // this.front becomes the resulting input values of the front side of the new Basica Flashcard object  
 function BasicFlashcard(frontSide, backSide) {
@@ -16,9 +16,9 @@ function BasicFlashcard(frontSide, backSide) {
     this.back = backSide;
 }
 
-
-//inquirer promise collects the front-side and back-side information and
-//creates and instance of a new basic flashcard then console.logs the card  
+// this function takes user input at the command line 
+//inquirer promise collects the input and allocates them to  the front-side and back-side of the newly created card 
+// the new card is stored in the json file and then console.logs "Done!" when the process is complete
 function createNewCard() {
     inquirer.prompt([{
         type: "input",
