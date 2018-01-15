@@ -70,4 +70,4 @@ function createNewCard() {
 
 createNewCard(); 
 
-//module.exports cloze.js 
+module.exports = clozeCard;  

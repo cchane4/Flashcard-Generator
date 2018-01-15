@@ -1,16 +1,34 @@
-//imports inquirer
-var inquirer = require("inquirer");
+var inquirer = require ('inquirer'); 
+var fs = require('fs'); 
 //imports the basic.js file 
-var basic = require("./basic.js"); 
+var BasicFlashcard = require("./basic.js"); 
 //imports the cloze.js file 
-var cloze = require("./cloze.js"); 
+var clozeCard = require("./cloze.js");
+// imports inquirer
+ 
+
+
 
 
 
 // takes in the user's choice of creating basic flashcards or cloze/delete flashcards 
-inquirer.prompt{( 
- 	type: 
- 	: "What type of flashcards would you like to make?"
+function makeChoice(){
+    var flashcardType = {
+    type:'list',
+    message: 'What type of card would you like to create?', 
+ 	choices:['basic','cloze'],  
+    name: 'choice'
+    }; 
 
+    inquirer.prompt(flashcardType).then(function(flashcard){ 
+        if(flashcard.choice === 'basic'){ 
+            BasicFlashcard(); 
+        } else if (flashcard.choice === 'cloze'){ 
+            clozeCard(); 
+        }
+    }); 
+}
 
-	)}
+makeChoice(); 
+
+    

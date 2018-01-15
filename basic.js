@@ -43,3 +43,4 @@ function createNewCard() {
 }
 
 createNewCard();
+module.exports = BasicFlashcard; 
